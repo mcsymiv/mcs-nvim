@@ -13,6 +13,6 @@ if settings.nvim_line == "lualine" then
   }
 else
   return {
-    'vim-airline/vim-airline'
+    'vim-airline/vim-airline',
   }
 end

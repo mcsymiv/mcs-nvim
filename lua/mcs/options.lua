@@ -17,3 +17,8 @@ o.splitbelow = true -- force all horizontal splits to go below current window
 o.splitright = true -- force all vertical splits to go to the right of current window
 o.tabstop = 2 -- how many columns a tab counts force
 o.termguicolors = true -- set term gui true colors (most terminals support this)
+
+-- sets cursor display to block
+-- :help options
+-- set guicursor
+o.guicursor = settings.guicursor

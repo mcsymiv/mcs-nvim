@@ -27,6 +27,9 @@ M.mouse = "nv"
 -- Tools that should be installed by Mason
 M.tools = {}
 
+-- sets cursor display
+M.guicursor = "n-v-c-i:block"
+
 -- LSPs that should be installed by Mason-lspconfig
 M.lsp_servers = {
   "lua_ls",
