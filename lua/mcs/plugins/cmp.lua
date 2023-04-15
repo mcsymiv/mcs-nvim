@@ -1,9 +1,9 @@
 local M = {
   'hrsh7th/nvim-cmp',
-  dependencies = { 
+  dependencies = {
     'hrsh7th/cmp-nvim-lsp',
     'L3MON4D3/LuaSnip',
-    'saadparwaiz1/cmp_luasnip' 
+    'saadparwaiz1/cmp_luasnip'
   },
 
   config = function()
@@ -15,6 +15,9 @@ local M = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
         end,
+      },
+      completion = {
+        autocomplete = false,
       },
 
       mapping = cmp.mapping.preset.insert {

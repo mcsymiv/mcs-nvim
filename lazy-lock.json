@@ -19,6 +19,5 @@
   "tint.nvim": { "branch": "master", "commit": "51e9144fa3cd3f2492a282ccadc8bd3355653f5c" },
   "tokyonight.nvim": { "branch": "main", "commit": "1b0c88094548a62641ece1e668fa9a234e1c539e" },
   "vim-airline": { "branch": "master", "commit": "a532fed72ace069e61c0132125b728316f9abd3c" },
-  "vim-fugitive": { "branch": "master", "commit": "ef99f1d90cdb33a52931aed5868785b51fb9411d" },
-  "vim-go": { "branch": "master", "commit": "a494378f6c106a97e39c62b493c14476f9f7de4f" }
+  "vim-fugitive": { "branch": "master", "commit": "ef99f1d90cdb33a52931aed5868785b51fb9411d" }
 }
