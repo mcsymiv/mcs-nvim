@@ -25,6 +25,9 @@ local M = {
 
     telescope.setup({
       defaults = {
+        file_ignore_patterns = {
+          "node_modules"
+        },
         layout_strategy = "vertical",
         layout_config = {
           width = 0.95,
