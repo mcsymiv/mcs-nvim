@@ -16,9 +16,10 @@ local M = {
           luasnip.lsp_expand(args.body)
         end,
       },
-      completion = {
-        autocomplete = false,
-      },
+      -- Disables lsp autocompletion
+      --- completion = {
+      ---   autocomplete = false,
+      --- },
 
       mapping = cmp.mapping.preset.insert {
         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
