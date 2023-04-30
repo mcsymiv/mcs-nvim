@@ -58,4 +58,4 @@ nmap('x', '<A-k>', ':m \'<-2<CR>gv=gv', opts)
 
 -- Paste remap 
 -- Pastes last yanked entry
-nmap('n', 'p', '"_dP', opts)
+-- nmap('n', 'p', '"_dP', opts)
