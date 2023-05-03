@@ -14,6 +14,8 @@ local M = {
   keys = {
     { "<leader>fc", "<cmd>Telescope commands<cr>", desc = "[f]ind [c]ommands" },
     { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "[f]ind [f]iles" },
+    { "<leader>lg", "<cmd>Telescope live_grep<cr>", desc = "[l]ive [g]rep" },
+    { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "[f]ind [b]uffers" },
     { "<leader>fs", "<cmd>Telescope grep_string<cr>", desc = "[f]ind [s]tring" },
     { "<leader>gs", "<cmd>Telescope git_status<cr>", desc = "[g]it [s]tatus" },
     -- file_browser extension remaps
