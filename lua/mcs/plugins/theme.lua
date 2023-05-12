@@ -8,6 +8,13 @@ if settings.theme == "tokyonight" then
       require("mcs.plugins.themes.tokyonight")
     end,
   }
+elseif settings.theme == "nordic" then
+  return {
+    "AlexvZyl/nordic.nvim",
+    config = function ()
+     require("mcs.plugins.themes.nordic")
+    end
+  }
 else
   return {
     "EdenEast/nightfox.nvim",
