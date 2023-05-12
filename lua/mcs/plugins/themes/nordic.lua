@@ -1,9 +1,67 @@
-local blue = {
-  light = "#82b5ba",
-  dark = "#41484d",
+local color = {
+  blue = {
+    light = "#82b5ba",
+    dark = "#41484d",
+  },
+
+  yellow = {
+    light = "#f0e086",
+    dark = "#7a6802",
+  },
+
+  gray = {
+    blue = "#3a404d",
+  }
 }
 
+-- converts decimal hex number into hexadecimal
+-- credit to /37796287 answer on SO
+local function dectohex(num)
+  if num == 0 then
+      return '0'
+  end
+  local neg = false
+  if num < 0 then
+      neg = true
+      num = num * -1
+  end
+
+  -- performs hex conversion 
+  local hexstr = "0123456789ABCDEF"
+  local result = ""
+  while num > 0 do
+      local n = math.fmod(num, 16)
+      result = string.sub(hexstr, n + 1, n + 1) .. result
+      num = math.floor(num / 16)
+  end
+
+  if neg then
+      result = '-' .. result
+  end
+
+  return result
+end
+
+-- converts #aaccff hex string 
+-- color into decimal value
+local function hextodec(num)
+  local hex = num:gsub("#", "")
+  return tonumber(hex, 16)
+end
+
+-- decreases hex color decimal value
+-- returns #aaccff hex color string
+local function dimhex(c)
+  local c_dec = hextodec(c)
+  local result = dectohex(c_dec - 300)
+  print(result)
+  return "#" .. result
+end
+
 local nord = require('nordic')
+
+
+-- Nordic setup
 nord.setup({
   -- Available themes: 'nordic', 'onedark'.
   -- Onedark is WIP.
@@ -40,15 +98,54 @@ nord.setup({
 
   -- Override the styling of any highlight group.
   override = {
+    -- Syntax
+    Identifier = {
+      fg = "#f51be6",
+    }, -- (preferred) any variable name
+    None = {
+      fg = "#f51be6",
+      bg = "#f51be6",
+    },
+
+    -- Telescope
+    -- Normals.
+    TelescopePromptNormal = {
+      bg = color.gray.blue,
+    },
+    TelescopeResultsNormal = {
+      bg = color.gray.blue,
+    },
+    TelescopePreviewNormal = {
+      bg = color.gray.blue,
+    },
+
+    -- Borders.
+    TelescopeBorder = {
+      bg = color.gray.blue,
+      fg = color.gray.blue,
+    },
+    TelescopePromptBorder = {
+      bg = color.gray.blue,
+      fg = color.gray.blue,
+    },
+    TelescopeResultsBorder = {
+      bg = color.gray.blue,
+      fg = color.gray.blue,
+    },
+    TelescopePreviewBorder = {
+      bg = color.gray.blue,
+      fg = color.gray.blue,
+    },
+
     -- Override of autocompletion styling
     NormalFloat = {
-      fg = blue.light,
-      bg = blue.dark,
+      fg = color.blue.light,
+      bg = color.blue.dark,
     }, -- Normal text in floating windows. Text in second after Pmenu popup
 
     Pmenu = {
-      fg = blue.light,
-      bg = blue.dark,
+      fg = color.blue.light,
+      bg = color.blue.dark,
     }, -- Popup menu
   },
 

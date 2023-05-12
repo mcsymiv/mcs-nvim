@@ -15,7 +15,9 @@ local M = {
       auto_install = false,
 
       highlight = { enable = true },
+
       indent = { enable = true, disable = { 'python' } },
+
       incremental_selection = {
         enable = true,
         keymaps = {
@@ -48,14 +50,17 @@ local M = {
             [']m'] = '@function.outer',
             [']]'] = '@class.outer',
           },
+
           goto_next_end = {
             [']M'] = '@function.outer',
             [']['] = '@class.outer',
           },
+
           goto_previous_start = {
             ['[m'] = '@function.outer',
             ['[['] = '@class.outer',
           },
+
           goto_previous_end = {
             ['[M'] = '@function.outer',
             ['[]'] = '@class.outer',
