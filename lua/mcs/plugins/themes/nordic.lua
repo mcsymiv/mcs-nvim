@@ -98,15 +98,6 @@ nord.setup({
 
   -- Override the styling of any highlight group.
   override = {
-    -- Syntax
-    Identifier = {
-      fg = "#f51be6",
-    }, -- (preferred) any variable name
-    None = {
-      fg = "#f51be6",
-      bg = "#f51be6",
-    },
-
     -- Telescope
     -- Normals.
     TelescopePromptNormal = {

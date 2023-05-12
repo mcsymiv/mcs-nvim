@@ -8,7 +8,7 @@ M.theme = "nordic"
 
 -- nvim status line plugins
 -- available: lualine, airline
-M.nvim_line = "airline"
+M.nvim_line = "lualine"
 
 -- Toggle global status line
 M.global_statusline = true
