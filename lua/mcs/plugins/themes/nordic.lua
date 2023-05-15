@@ -1,16 +1,37 @@
 local color = {
+  white = {
+    w0 = "#ffffff",
+  },
+
+  red = {
+    r0 = "#f7d0d0",
+  },
+
   blue = {
-    light = "#82b5ba",
-    dark = "#41484d",
+    b0 = "#34c6eb",
+    b1 = "#82b5ba",
+    b2 = "#41484d",
+    b3 = "#b8e6f2",
+  },
+
+  green = {
+    g0 = "#4ede74",
+    g1 = "#479e42",
   },
 
   yellow = {
-    light = "#f0e086",
-    dark = "#7a6802",
+    y0 = "#f0e086",
+    y1 = "#7a6802",
+    y2 = "#ebcd09",
   },
 
   gray = {
-    blue = "#3a404d",
+    blue0 = "#3a404d",
+  },
+
+  pink = {
+    p0 = "#ed91ed",
+    p1 = "#e6438c",
   }
 }
 
@@ -93,51 +114,79 @@ nord.setup({
   -- WIP.
   onedark = {
       -- Brighten the whites to fit the theme better.
-      -- brighter_whites = true,
+      brighter_whites = true,
   },
 
   -- Override the styling of any highlight group.
   override = {
+    -- Syntax colors
+    Title = {
+      fg = color.yellow.y2,
+    },
+
+    Identifier = {
+      fg = color.green.g0,
+    }, -- (preferred) any variable name
+
+    Function = {
+      fg = color.blue.b0,
+    }, -- function name (also: methods for classes)
+
+    Keyword = {
+      fg = color.pink.p0,
+      bold = false,
+    },
+
+    Operator = {
+      fg = color.blue.b3,
+    },
+
+    Visual = {
+      bg = color.red.r0,
+      bold = true,
+    }, -- Visual mode selection
+
     -- Telescope
     -- Normals.
     TelescopePromptNormal = {
-      bg = color.gray.blue,
+      bg = color.gray.blue0,
     },
     TelescopeResultsNormal = {
-      bg = color.gray.blue,
+      bg = color.gray.blue0,
     },
     TelescopePreviewNormal = {
-      bg = color.gray.blue,
+      bg = color.gray.blue0,
     },
 
     -- Borders.
     TelescopeBorder = {
-      bg = color.gray.blue,
-      fg = color.gray.blue,
+      bg = color.gray.blue0,
+      fg = color.gray.blue0,
     },
     TelescopePromptBorder = {
-      bg = color.gray.blue,
-      fg = color.gray.blue,
+      bg = color.gray.blue0,
+      fg = color.gray.blue0,
     },
     TelescopeResultsBorder = {
-      bg = color.gray.blue,
-      fg = color.gray.blue,
+      bg = color.gray.blue0,
+      fg = color.gray.blue0,
     },
     TelescopePreviewBorder = {
-      bg = color.gray.blue,
-      fg = color.gray.blue,
+      bg = color.gray.blue0,
+      fg = color.gray.blue0,
     },
 
     -- Override of autocompletion styling
     NormalFloat = {
-      fg = color.blue.light,
-      bg = color.blue.dark,
+      fg = color.blue.b0,
+      bg = color.blue.b2,
     }, -- Normal text in floating windows. Text in second after Pmenu popup
 
     Pmenu = {
-      fg = color.blue.light,
-      bg = color.blue.dark,
+      fg = color.blue.b0,
+      bg = color.blue.b2,
     }, -- Popup menu
+
   },
 
   cursorline = {
