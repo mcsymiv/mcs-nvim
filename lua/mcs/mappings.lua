@@ -21,11 +21,8 @@ nmap('n', '<leader>x', vim.cmd.Ex)
 -- Telescope word searc
 nmap('n', '<leader>/', function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
-  require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-    winblend = 10,
-    previewer = false,
-  })
-end, { desc = '[/] Fuzzily search in current buffer' })
+  require('telescope.builtin').current_buffer_fuzzy_find()
+end, opts)
 
 -- Shows [ error | warning ] message
 nmap('n', '<leader>e', vim.diagnostic.open_float)
@@ -59,3 +56,7 @@ nmap('x', '<A-k>', ':m \'<-2<CR>gv=gv', opts)
 -- Paste remap 
 -- Pastes last yanked entry
 -- nmap('n', 'p', '"_dP', opts)
+
+
+-- Git
+nmap('n', '<leader>gg', '<cmd>Git<cr>', opts)

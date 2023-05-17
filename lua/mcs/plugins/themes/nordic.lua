@@ -3,6 +3,10 @@ local color = {
     w0 = "#ffffff",
   },
 
+  black = {
+    b0 = "#080303",
+  },
+
   red = {
     r0 = "#f7d0d0",
   },
@@ -142,7 +146,7 @@ nord.setup({
     },
 
     Visual = {
-      bg = color.red.r0,
+      bg = color.black.b0,
       bold = true,
     }, -- Visual mode selection
 
