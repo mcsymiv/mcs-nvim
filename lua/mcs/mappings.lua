@@ -38,7 +38,7 @@ local ui = require('harpoon.ui')
 
 nmap('n', '<leader>ta', mark.add_file, opts)
 nmap('n', '<leader>tt', ui.toggle_quick_menu, opts)
-nmap('n', '<C-s>', function() ui.nav_file(2) end)
+nmap('n', '<C-h>', function() ui.nav_file(2) end)
 nmap('n', '<C-f>', function() ui.nav_file(1) end)
 
 -- Move text
