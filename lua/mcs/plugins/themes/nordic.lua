@@ -150,6 +150,11 @@ nord.setup({
       bold = true,
     }, -- Visual mode selection
 
+    Comment = {
+      fg = "#5e6466",
+      italic = true,
+    },
+
     -- Telescope
     -- Normals.
     TelescopePromptNormal = {
