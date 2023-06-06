@@ -90,7 +90,7 @@ local nord = require('nordic')
 nord.setup({
   -- Available themes: 'nordic', 'onedark'.
   -- Onedark is WIP.
-  theme = 'nordic',
+  theme = 'onedark',
 
   -- Enable bold keywords.
   bold_keywords = true,
