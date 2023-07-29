@@ -19,6 +19,7 @@ api.nvim_create_autocmd(
   { pattern = "*", command = "set nocursorline", group = cursorGrp }
 )
 
+--[[
 api.nvim_create_autocmd('BufWritePre', {
   pattern = '*.go',
   callback = function()
@@ -26,3 +27,4 @@ api.nvim_create_autocmd('BufWritePre', {
     vim.lsp.buf.format()
   end
 })
+]]
