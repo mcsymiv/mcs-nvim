@@ -33,13 +33,14 @@ nmap('n', '<c-d>', '<c-d>zz', opts)
 nmap('n', '<c-u>', '<c-u>zz', opts)
 
 -- Harpoon
-local mark = require('harpoon.mark')
-local ui = require('harpoon.ui')
-
+-- local mark = require('harpoon.mark')
+-- local ui = require('harpoon.ui')
+--[[ 
 nmap('n', '<leader>ta', mark.add_file, opts)
 nmap('n', '<leader>tt', ui.toggle_quick_menu, opts)
 nmap('n', '<C-h>', function() ui.nav_file(2) end)
 nmap('n', '<C-f>', function() ui.nav_file(1) end)
+]]
 
 -- Move text
 -- v, x mode duplicate are required
