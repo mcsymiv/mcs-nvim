@@ -18,12 +18,6 @@ nmap("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
 -- Opens vim explorer
 nmap('n', '<leader>x', vim.cmd.Ex)
 
--- Telescope word searc
-nmap('n', '<leader>/', function()
-  -- You can pass additional configuration to telescope to change theme, layout, etc.
-  require('telescope.builtin').current_buffer_fuzzy_find()
-end, opts)
-
 -- Shows [ error | warning ] message
 nmap('n', '<leader>e', vim.diagnostic.open_float)
 nmap('n', '<leader>h', vim.diagnostic.hide)
