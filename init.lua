@@ -4,7 +4,6 @@ require("config.lazy")
 local tel = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', tel.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>lg', tel.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('i', '<Tab>', '<C-X><C-O>', { desc = 'Telescope live grep' })
 
 -- options
 vim.opt.shiftwidth = 2
