@@ -1,16 +1,22 @@
--- Load global functions
--- require("mcs.globals")
+require("config.lazy")
 
--- Plugin management via lazy
-require("mcs.lazy")
+-- mappings
+local tel = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', tel.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>lg', tel.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('i', '<Tab>', '<C-X><C-O>', { desc = 'Telescope live grep' })
 
--- Plugin management via Packer
--- require("mcs.packer")
--- "Global" Keymappings
-require("mcs.mappings")
+-- options
+vim.opt.shiftwidth = 2
+vim.opt.clipboard = "unnamedplus"
+vim.opt.number = true
+vim.opt.relativenumber = true
 
--- All non plugin related (vim) options
-require("mcs.options")
-
--- Vim autocommands/autogroups
-require("mcs.autocmd")
+-- autocmd
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking (copying) text",
+  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
