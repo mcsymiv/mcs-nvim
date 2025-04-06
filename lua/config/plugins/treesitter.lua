@@ -1,16 +1,28 @@
-return {
-  {
+  return {
+    {
     "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    config = function ()
-      local configs = require("nvim-treesitter.configs")
+    run = ":TSUpdate",
 
-      configs.setup({
-	ensure_installed = { "lua", "vim", "vimdoc", "javascript", "typescript", "go" },
-	sync_install = false,
+    config = function()
+      require('nvim-treesitter.configs').setup {
+	-- Add languages to be installed here that you want installef for treesitter
+	ensure_installed = { 'query', 'go', 'lua', 'javascript', 'typescript', 'vimdoc', 'vim' },
+	-- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
+	auto_install = false,
+
 	highlight = { enable = true },
-	indent = { enable = true },
-      })
-    end
-  },
+	indent = { enable = true, disable = { 'python' } },
+
+	incremental_selection = {
+	  enable = true,
+	  keymaps = {
+	    -- init_selection = '<leader>ss',
+	    node_incremental = 'v',
+	    node_decremental = 'V',
+	    -- scope_incremental = '<leaded>sc',
+	  },
+	},
+      }
+    end,
+  }
 }
