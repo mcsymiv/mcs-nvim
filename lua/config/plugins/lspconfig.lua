@@ -17,6 +17,7 @@ return {
     config = function()
       require'lspconfig'.tsserver.setup{}
       require'lspconfig'.lua_ls.setup{}
+      require'lspconfig'.gopls.setup{}
     end
   }
 }
